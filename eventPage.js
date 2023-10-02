@@ -80,6 +80,3 @@ chrome.storage.onChanged.addListener(function(changes, storageName){
         console.error('newValue for total is undefined');
     }
 });
-
-
-
