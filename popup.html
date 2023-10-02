@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Budget Manager</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+    <h1>Budget Manager</h1>
+    <div class="options-container">
+        <h2>Limit: <span id="limit">0</span></h2>
+        <button id="goToOptions">
+            <span class="gear-icon"></span>
+        </button>
+    </div>
+    <h2>Total Spent: <span id="total">0</span></h2>
+    <h2>Remaining: <span id="remainingLimit"></span></h2>
+    <h3>Enter spending:</h3>
+    <input type="text" placeholder="enter amount..." id="enteredAmount" />
+    <input type="submit" id="spendButton" value="spend" />
+
+</body>
+
+</html>

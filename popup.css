@@ -1,0 +1,91 @@
+body {
+    font-family: 'Andale Mono', monospace;
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 250px;
+}
+
+h1 {
+    color: #8d66e8;
+    border-bottom: 2px solid #8d66e8;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+h2,
+h3 {
+    color: #94b34d;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+h3{
+    color: #8d66e8a3;
+    margin-top: 15px;
+}
+
+span {
+    font-weight: bold;
+    color: #4b4f48e4;
+}
+
+input[type="text"],
+input[type="submit"] {
+    box-sizing: border-box;
+    font-family: 'Andale Mono', monospace;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    placeholder: lightgray;
+}
+
+input[type="submit"] {
+    background-color: #8d66e8a3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+.gear-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/icon_gear.png');
+    background-size: cover;
+    vertical-align: middle;
+}
+
+#goToOptions {
+    background-color: #94b34d;
+    border: none;
+    border-radius: 5px; 
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#goToOptions:hover {
+    background-color: #7f9c3a; /* Slightly darker shade for hover effect */
+}
+
+.options-container {
+    display: flex;
+    align-items: center; /* Vertically align items in the middle */
+    justify-content: space-between; /* Distribute space between the items */
+}
+
