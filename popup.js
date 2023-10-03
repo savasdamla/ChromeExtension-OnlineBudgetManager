@@ -17,8 +17,6 @@ $(function () {
             var newTotal = 0;
             if (budget.total) {
                 newTotal += parseFloat(budget.total);
-                console.log(`budget total: ${newTotal}`);
-
             }
 
             var amount = $('#enteredAmount').val();
@@ -28,7 +26,6 @@ $(function () {
                 }
                 newTotal += parseFloat(amount);
                 var remaining = (budget.limit && budget.total) ? (budget.limit - newTotal) : 0;
-                console.log(remaining)
             }
 
             chrome.storage.sync.set({ 'total': newTotal }, function () {
@@ -48,5 +45,16 @@ $(function () {
             $('#enteredAmount').val('');
             $('#remainingLimit').text(remaining.toFixed(2));
         });
+
+        var amount = $('#enteredAmount').val();
+        if (amount) {
+            chrome.storage.sync.get(['history'], function (data) {
+                var history = data.history || [];
+                var today = new Date();
+                var dateStr = today.getFullYear() + '-' + (today.getMonth() + 1).toString().padStart(2, '0') + '-' + today.getDate().toString().padStart(2, '0');
+                history.push({ date: dateStr, amount: parseFloat(amount) });
+                chrome.storage.sync.set({ 'history': history });
+            });
+        }
     });
 });

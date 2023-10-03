@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <title>Manager Options</title>
     <title>Budget Manager</title>
     <script src="jquery-3.7.1.min.js"></script>
@@ -12,13 +13,16 @@
 <body>
     <div class="options-menu-container">
         <h1>Options Menu</h1>
+        <input type="submit" id="viewHistory" value="View History">
+        <input type="submit" id="resetTotal" value="Reset Total">
         <input type="submit" id="showLimitButton" value="Set Limit">
         <div class="limit-container" style="display: none;">
             <h2><input type="text" id="limit"></h2>
             <input type="submit" id="saveLimit" value="Save Limit">
         </div>
-        <input type="submit" id="resetTotal" value="Reset Total">
+    </div>
+    <div id="historyContainer" style="display: none;">
+    </div>
 </body>
-</div>
 
 </html>
