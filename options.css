@@ -28,17 +28,28 @@ h2 {
 }
 
 input[type="text"] {
+    font-family: 'Andale Mono', monospace;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border:none;
+    border-radius: 8px 0 0 8px;
     width: 100px;
+}
+
+#saveLimit {
+    background-color: #94b34d;
+    border:none;
+    width: 100px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left:0px;
+    border-radius: 0 8px 8px 0;
 }
 
 input[type="submit"] {
     font-family: 'Andale Mono', monospace;
     padding: 10px 15px;
     width: 220px;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     margin-bottom: 30px;
     margin-left: 5px;
@@ -55,15 +66,6 @@ input[type="submit"]:hover {
     display: flex;
     align-items: center;
     margin-left: 10px;
-}
-
-#saveLimit {
-    background-color: #94b34d;
-    border:none;
-    width: 100px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-
 }
 
 
@@ -96,15 +98,15 @@ input[type="submit"]:hover {
 .history-list {
     list-style-type: none;
     width: 400px;
-    max-height: 150px; 
+    max-height: 100px; 
     overflow-y: auto;
-    box-sizing: border-box; /* Add this line */
+    box-sizing: border-box; 
 }
 
 .history-list li {
     width: 320px;
     color: #4b4f48e4;        
-    font-size: 18px;   
+    font-size: 15px;   
     margin-bottom: 10px;
     border-bottom: 1px solid #999999e4; 
     padding-bottom: 5px;
@@ -121,3 +123,41 @@ input[type="submit"]:hover {
     color:  white;
     float: right; 
 }
+
+.history-checkbox {
+    float: left;
+    clear: both;
+    cursor: pointer;
+}
+
+.edit-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/icon_edit.png');
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.history-buttons {
+    width: 100%; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.history-buttons button {
+    background-color: #8d66e8;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-family: 'Andale Mono', monospace;
+    margin: 5px 5px 0 0;
+}
+
+.history-buttons button:hover {
+    background-color: #7555c0; 
+}
+

@@ -76,16 +76,16 @@ input[type="submit"]:hover {
     border-radius: 5px; 
     padding: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease; 
 }
 
 #goToOptions:hover {
-    background-color: #7f9c3a; /* Slightly darker shade for hover effect */
+    background-color: #7f9c3a; 
 }
 
 .options-container {
     display: flex;
-    align-items: center; /* Vertically align items in the middle */
-    justify-content: space-between; /* Distribute space between the items */
+    align-items: center; 
+    justify-content: space-between;
 }
 
