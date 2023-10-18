@@ -11,7 +11,11 @@ $(function () {
 
     $('#spendButton').click(function () {
         var amount = $('#enteredAmount').val();
-        if (!amount) return;
+        if (!isValidNumber(amount)) {
+            chrome.notifications.create('entryAlert',
+                createNotification('basic', '/images/b_icon-48.png', 'Enter a valid price', 'Looks like your spending entry is invalid!'));
+            return;
+        }
 
         if (amount.includes(',')) {
             amount = amount.replace(',', '.');

@@ -28,7 +28,6 @@ function setUpContextMenu() {
 
 function isValidNumber(val) {
     val = val.replace(',', '.').replace('€', '');
-
     return !isNaN(val) && parseFloat(val) == val;
 }
 
@@ -60,7 +59,6 @@ chrome.contextMenus.onClicked.addListener(function (clickedData) {
             });
         }
         else {
-            console.log(clickedData.selectionText, isValidNumber(clickedData.selectionText))
             chrome.notifications.create('selectionAlert',
                 createNotification('basic', '/images/b_icon-48.png', 'Select a valid price', 'Looks like your selection is invalid!'));
         }
