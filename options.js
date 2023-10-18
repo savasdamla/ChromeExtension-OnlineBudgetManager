@@ -18,8 +18,7 @@ $(function () {
         }
     });
     $('#resetTotal').click(function () {
-        // Clear the history when total is reset
-        chrome.storage.sync.set({ 'total': 0, 'history': [] }); 
+        chrome.storage.sync.set({ 'total': 0, 'history': [] }); // Clear the history when total is reset
         var notifOptions = {
             type: 'basic',
             iconUrl: '/images/b_icon-48.png',
